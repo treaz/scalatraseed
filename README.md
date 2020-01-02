@@ -11,6 +11,7 @@ Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the fe
   * incoming/outoging json support
   * 404/not found handling
   * server side exception handling
+  * handling cookies and session attributes
 
 ## Debug
 Configure [Intellij](http://scalatra.org/getting-started/ide-support.html#intellij-idea)
