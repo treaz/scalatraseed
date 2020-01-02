@@ -43,6 +43,19 @@ class APIServlet extends ScalatraServlet with JacksonJsonSupport {
     FlowerData.all.filter(_.slug == params("slug"))
   }
 
+  /** Called when no route matches the current request for any method */
+  notFound {
+    logger.debug("inside not found")
+    NotFound("endpoint not found")
+  }
+
+  /** Called when the server side code throws an Exception */
+  error {
+    case ex: Exception =>
+      logger.error(s"Exception: ($ex.getMessage)")
+      BadRequest(s"""{"message": "${ex.getMessage}"}""")
+  }
+
 }
 
 object FlowerData {

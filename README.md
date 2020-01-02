@@ -9,6 +9,8 @@ Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the fe
   * Named parameters
   * specific status code
   * incoming/outoging json support
+  * 404/not found handling
+  * server side exception handling
 
 ## Debug
 Configure [Intellij](http://scalatra.org/getting-started/ide-support.html#intellij-idea)
