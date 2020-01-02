@@ -24,5 +24,11 @@ javaOptions ++= Seq(
   "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
 )
 
+//JSON support
+libraryDependencies ++= Seq(
+  "org.scalatra" %% "scalatra-json" % ScalatraVersion,
+  "org.json4s" %% "json4s-jackson" % "3.6.7"
+)
+
 enablePlugins(SbtTwirl)
 enablePlugins(ScalatraPlugin)

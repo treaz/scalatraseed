@@ -8,6 +8,7 @@ Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the fe
 * api endpoint (APIServlet) with
   * Named parameters
   * specific status code
+  * incoming/outoging json support
 
 ## Debug
 Configure [Intellij](http://scalatra.org/getting-started/ide-support.html#intellij-idea)
