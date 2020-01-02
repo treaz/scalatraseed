@@ -14,6 +14,7 @@ Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the fe
   * 404/not found handling
   * server side exception handling
   * handling cookies and session attributes
+* WebSockets support (use chrome extension Smart Websocket Client to test)
 
 ## Debug
 Configure [Intellij](http://scalatra.org/getting-started/ide-support.html#intellij-idea)

@@ -7,5 +7,6 @@ class ScalatraBootstrap extends LifeCycle {
   override def init(context: ServletContext) {
     context.mount(new MyScalatraServlet, "/*")
     context.mount(new APIServlet, "/api/*")
+    context.mount(new ChatController, "/chat/*")
   }
 }
