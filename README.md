@@ -5,9 +5,14 @@ Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the fe
 ## Features
 * logging with logback
 * debug configuration
+* api endpoint (APIServlet) with
+  * Named parameters
+  * specific status code
 
 ## Debug
-http://scalatra.org/getting-started/ide-support.html#intellij-idea
+Configure [Intellij](http://scalatra.org/getting-started/ide-support.html#intellij-idea)
+
+First run jetty and after that run the debug config 
 
 
 ## Build & Run ##
