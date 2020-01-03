@@ -7,7 +7,7 @@ name := "scalatraseed"
 version := "0.1.0-SNAPSHOT"
 
 scalaVersion := "2.13.1"
-val JettyVersion = "9.4.24.v20191120"
+val JettyVersion = "9.4.25.v20191220"
 
 resolvers += Classpaths.typesafeReleases
 
