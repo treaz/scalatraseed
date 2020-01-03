@@ -15,6 +15,9 @@ Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the fe
   * server side exception handling
   * handling cookies and session attributes
 * WebSockets support (use chrome extension Smart Websocket Client to test)
+* sql DB support
+* TODO support for scalastyle?
+* TODO support for scala lint?
 
 ## Debug
 Configure [Intellij](http://scalatra.org/getting-started/ide-support.html#intellij-idea)

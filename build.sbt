@@ -1,5 +1,3 @@
-val ScalatraVersion = "2.7.0-RC1"
-
 organization := "com.horiaconstantin"
 
 name := "scalatraseed"
@@ -7,12 +5,11 @@ name := "scalatraseed"
 version := "0.1.0-SNAPSHOT"
 
 scalaVersion := "2.13.1"
+val ScalatraVersion = "2.7.0-RC1"
 val JettyVersion = "9.4.25.v20191220"
 
 resolvers += Classpaths.typesafeReleases
 
-//https://www.scala-sbt.org/1.x/docs/Library-Dependencies.html#Getting+the+right+Scala+version+with
-//Difference between % and %% in sbt
 libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra" % ScalatraVersion,
   "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
@@ -36,10 +33,16 @@ libraryDependencies ++= Seq(
 // Websockets support
 libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
-  "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
   "org.scalatra" %% "scalatra-atmosphere" % ScalatraVersion,
   "org.eclipse.jetty" % "jetty-plus" % JettyVersion % "container;provided",
   "org.eclipse.jetty.websocket" % "websocket-server" % JettyVersion % "container;provided",
+)
+
+// SQL support
+libraryDependencies ++= Seq(
+  "com.typesafe.slick" %% "slick" % "3.3.2",
+  "com.h2database" % "h2" % "1.4.196",
+  "com.mchange" % "c3p0" % "0.9.5.2"
 )
 
 enablePlugins(SbtTwirl)
