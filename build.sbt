@@ -42,7 +42,7 @@ libraryDependencies ++= Seq(
 libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick" % "3.3.2",
   "com.h2database" % "h2" % "1.4.200",
-  "com.mchange" % "c3p0" % "0.9.5.2"
+  "com.mchange" % "c3p0" % "0.9.5.5"
 )
 
 enablePlugins(SbtTwirl)
