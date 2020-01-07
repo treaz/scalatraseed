@@ -4,7 +4,7 @@
 
 Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the features demonstrated on http://scalatra.org/guides/2.6/
 
-## Features
+## Features ##
 * logging with logback
 * debug configuration
 * api endpoint (APIServlet) with
@@ -17,8 +17,9 @@ Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the fe
 * WebSockets support (use chrome extension Smart Websocket Client to test)
 * sql DB support
 * linting using scalastyle (recognized automatically by intellij)
+* packaging to app into docker container
 
-## Debug
+## Debug ##
 Configure [Intellij](http://scalatra.org/getting-started/ide-support.html#intellij-idea)
 
 First run jetty and after that run the debug config 
@@ -34,3 +35,10 @@ $ sbt
 ```
 
 If `browse` doesn't launch your browser, manually open [http://localhost:8080/](http://localhost:8080/) in your browser.
+
+## Docker ##
+```bash
+sbt docker:publishLocal
+cd docker
+docker-compose up
+```
