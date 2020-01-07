@@ -13,7 +13,7 @@ trait C3p0ClientInit {
     Database.forDataSource(cpds, None) // create the Database object
   }
 
-  def closeDbConnection() {
+  def closeDbConnection(): Unit = {
     logger.info("Closing c3po connection pool")
     cpds.close()
   }
