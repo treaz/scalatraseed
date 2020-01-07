@@ -14,9 +14,12 @@ libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra" % ScalatraVersion,
   "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
   "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
-  "org.eclipse.jetty" % "jetty-webapp" % JettyVersion % "container",
+  "org.eclipse.jetty" % "jetty-webapp" % JettyVersion % "container;compile",
   "javax.servlet" % "javax.servlet-api" % "4.0.1" % "provided"
 )
+
+enablePlugins(SbtTwirl)
+enablePlugins(ScalatraPlugin)
 
 //Debug configuration
 javaOptions ++= Seq(
@@ -35,6 +38,7 @@ libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
   "org.scalatra" %% "scalatra-atmosphere" % ScalatraVersion,
   "org.eclipse.jetty" % "jetty-plus" % JettyVersion % "container;provided",
+  "org.eclipse.jetty" % "jetty-continuation" % JettyVersion % "container;provided", // to fix this https://github.com/Atmosphere/atmosphere/issues/978
   "org.eclipse.jetty.websocket" % "websocket-server" % JettyVersion % "container;provided",
 )
 
@@ -45,5 +49,20 @@ libraryDependencies ++= Seq(
   "com.mchange" % "c3p0" % "0.9.5.5"
 )
 
-enablePlugins(SbtTwirl)
-enablePlugins(ScalatraPlugin)
+// Docker support
+maintainer := "Gary Coady <gary@lyranthe.org>"
+dockerBaseImage := "openjdk:12-alpine"
+// Don't create user demiourgos728 as the baseImage does not support useradd
+daemonUserUid in Docker := None
+daemonUser in Docker := "daemon"
+dockerExposedPorts := Seq(8080)
+dockerUpdateLatest := true
+enablePlugins(JavaAppPackaging) // standalone app needs to to packaged first
+enablePlugins(DockerPlugin)
+enablePlugins(AshScriptPlugin) // used because alpine does not contain bash
+
+// Use this to see deprecation warnings
+scalacOptions := Seq("-unchecked", "-deprecation")
+
+
+
