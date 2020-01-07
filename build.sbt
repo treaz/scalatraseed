@@ -62,7 +62,7 @@ enablePlugins(DockerPlugin)
 enablePlugins(AshScriptPlugin) // used because alpine does not contain bash
 
 // HTTP client
-libraryDependencies ++= Seq("com.softwaremill.sttp.client" %% "core" % "2.0.0-RC5")
+libraryDependencies ++= Seq("com.softwaremill.sttp.client" %% "core" % "2.0.0-RC6")
 
 //Metrics support
 libraryDependencies ++= Seq("org.scalatra" %% "scalatra-metrics" % ScalatraVersion)
