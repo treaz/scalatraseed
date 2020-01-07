@@ -87,11 +87,11 @@ trait SlickRoutes extends ScalatraBase with FutureSupport {
 
   def db: Database
 
-  get("/db/create-db") {
+  get("/db-actions/create-db") {
     db.run(Tables.createDatabase)
   }
 
-  get("/db/drop-db") {
+  get("/db-actions/drop-db") {
     db.run(Tables.dropSchemaAction)
   }
 
@@ -103,7 +103,7 @@ trait SlickRoutes extends ScalatraBase with FutureSupport {
   }
 }
 
-class SlickApp(val db: Database) extends ScalatraServlet with FutureSupport with SlickRoutes {
+class DatabaseController(val db: Database) extends ScalatraServlet with FutureSupport with SlickRoutes {
 
   protected implicit def executor: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
 

@@ -10,7 +10,7 @@ class ScalatraBootstrap extends LifeCycle with C3p0ClientInit {
     context.mount(new MyScalatraServlet, "/*")
     context.mount(new APIServlet, "/api/*")
     context.mount(new ChatController, "/chat/*")
-    context.mount(new SlickApp(db), "/slick/*")
+    context.mount(new DatabaseController(db), "/db/*")
     context.mount(new HTTPClientServlet, "/httpclient/*")
   }
 
