@@ -45,7 +45,7 @@ libraryDependencies ++= Seq(
 // SQL support
 libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick" % "3.3.2",
-  "com.h2database" % "h2" % "1.4.200",
+  "com.h2database" % "h2" % "1.4.199", // version 200 throws a NetUtils2 exception
   "com.mchange" % "c3p0" % "0.9.5.5"
 )
 
@@ -60,6 +60,10 @@ dockerUpdateLatest := true
 enablePlugins(JavaAppPackaging) // standalone app needs to to packaged first
 enablePlugins(DockerPlugin)
 enablePlugins(AshScriptPlugin) // used because alpine does not contain bash
+
+// HTTP client
+libraryDependencies ++= Seq("com.softwaremill.sttp.client" %% "core" % "2.0.0-RC5")
+
 
 // Use this to see deprecation warnings
 scalacOptions := Seq("-unchecked", "-deprecation")

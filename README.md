@@ -18,6 +18,7 @@ Demo project based on `sbt new scalatra/scalatra.g8`. It contains some of the fe
 * sql DB support
 * linting using scalastyle (recognized automatically by intellij)
 * packaging to app into docker container
+* http client
 
 ## Debug ##
 Configure [Intellij](http://scalatra.org/getting-started/ide-support.html#intellij-idea)

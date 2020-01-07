@@ -7,7 +7,15 @@
     </encoder>
   </appender>
 
-  <root level="debug">
+  <logger name="com.horiaconstantin" level="debug">
+    <appender-ref ref="STDOUT"/>
+  </logger>
+
+  <logger name="oeja.AnnotationParser" level="error">
+    <appender-ref ref="STDOUT"/>
+  </logger>
+
+  <root level="warn">
     <appender-ref ref="STDOUT" />
   </root>
 </configuration>
