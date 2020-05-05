@@ -30,7 +30,7 @@ javaOptions ++= Seq(
 //JSON support
 libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra-json" % ScalatraVersion,
-  "org.json4s" %% "json4s-jackson" % "3.6.7"
+  "org.json4s" %% "json4s-jackson" % "3.6.8"
 )
 
 // Websockets support
