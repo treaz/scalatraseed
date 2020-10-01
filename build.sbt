@@ -6,7 +6,7 @@ version := "0.1.0-SNAPSHOT"
 
 scalaVersion := "2.13.1"
 val ScalatraVersion = "2.7.0"
-val JettyVersion = "9.4.30.v20200611"
+val JettyVersion = "9.4.32.v20200930"
 
 resolvers += Classpaths.typesafeReleases
 
