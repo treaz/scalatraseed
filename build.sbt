@@ -13,7 +13,7 @@ resolvers += Classpaths.typesafeReleases
 libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra" % ScalatraVersion,
   "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
-  "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
+  "ch.qos.logback" % "logback-classic" % "1.2.5" % "runtime",
   "org.eclipse.jetty" % "jetty-webapp" % JettyVersion % "container;compile",
   "javax.servlet" % "javax.servlet-api" % "4.0.1" % "provided"
 )
