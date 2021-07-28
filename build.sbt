@@ -4,16 +4,16 @@ name := "scalatraseed"
 
 version := "0.1.0-SNAPSHOT"
 
-scalaVersion := "2.13.1"
-val ScalatraVersion = "2.7.1"
-val JettyVersion = "9.4.35.v20201120"
+scalaVersion := "2.13.6"
+val ScalatraVersion = "2.7.0"
+val JettyVersion = "9.4.43.v20210629"
 
 resolvers += Classpaths.typesafeReleases
 
 libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra" % ScalatraVersion,
   "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
-  "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
+  "ch.qos.logback" % "logback-classic" % "1.2.5" % "runtime",
   "org.eclipse.jetty" % "jetty-webapp" % JettyVersion % "container;compile",
   "javax.servlet" % "javax.servlet-api" % "4.0.1" % "provided"
 )
