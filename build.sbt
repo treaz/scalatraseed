@@ -46,7 +46,7 @@ libraryDependencies ++= Seq(
 libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick" % "3.3.3",
   "com.h2database" % "h2" % "1.4.199", // version 200 throws a NetUtils2 exception
-  "com.mchange" % "c3p0" % "0.9.5.5"
+  "com.mchange" % "c3p0" % "0.10.0-pre4"
 )
 
 // Docker support
