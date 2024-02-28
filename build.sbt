@@ -4,7 +4,7 @@ name := "scalatraseed"
 
 version := "0.1.0-SNAPSHOT"
 
-scalaVersion := "2.13.6"
+scalaVersion := "2.13.13"
 val ScalatraVersion = "2.7.0"
 val JettyVersion = "9.4.43.v20210629"
 
