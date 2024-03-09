@@ -44,7 +44,7 @@ libraryDependencies ++= Seq(
 
 // SQL support
 libraryDependencies ++= Seq(
-  "com.typesafe.slick" %% "slick" % "3.3.3",
+  "com.typesafe.slick" %% "slick" % "3.5.0",
   "com.h2database" % "h2" % "1.4.199", // version 200 throws a NetUtils2 exception
   "com.mchange" % "c3p0" % "0.9.5.5"
 )
