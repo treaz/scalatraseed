@@ -53,8 +53,8 @@ libraryDependencies ++= Seq(
 maintainer := "Gary Coady <gary@lyranthe.org>"
 dockerBaseImage := "openjdk:12-alpine"
 // Don't create user demiourgos728 as the baseImage does not support useradd
-daemonUserUid in Docker := None
-daemonUser in Docker := "daemon"
+(Docker / daemonUserUid) := None
+(Docker / daemonUser) := "daemon"
 dockerExposedPorts := Seq(8080)
 dockerUpdateLatest := true
 enablePlugins(JavaAppPackaging) // standalone app needs to to packaged first
